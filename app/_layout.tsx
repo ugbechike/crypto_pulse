@@ -15,6 +15,14 @@ import { PortalProvider } from '@tamagui/portal';
 
 import { useColorScheme } from '@/hooks/useColorScheme';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+import { WagmiProvider } from 'wagmi';
+import {
+  AppKit,
+  createAppKit,
+} from "@reown/appkit-wagmi-react-native";
+import { wagmiConfig, projectId } from '@/config/wagmi.config';
+import { mainnet } from "@wagmi/core/chains";
+
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -33,11 +41,20 @@ export default function RootLayout() {
     }
   }, [loaded]);
 
+  // 3. Create modal
+createAppKit({
+  projectId,
+  wagmiConfig,
+  defaultChain: mainnet, // Optional
+  enableAnalytics: true, // Optional - defaults to your Cloud configuration
+});
+
   if (!loaded) {
     return null;
   }
 
   return (
+    <WagmiProvider config={wagmiConfig}>
     <QueryClientProvider client={queryClient}>
       <TamaguiProvider config={config}  defaultTheme="dark">
         <PortalProvider>
@@ -52,12 +69,15 @@ export default function RootLayout() {
               }}
             >
               <Stack.Screen name="index" options={{ headerShown: false }} />
+              <Stack.Screen name="trends" options={{ headerShown: false }} />
             </Stack>
             <StatusBar style="light" />
+            <AppKit />
             </SafeAreaView>
           </SafeAreaProvider>
         </PortalProvider>
       </TamaguiProvider> 
     </QueryClientProvider>  
+    </WagmiProvider>
   );
 }
