@@ -1,50 +1,89 @@
-# Welcome to your Expo app 👋
+# Crypto Pulse
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A modern cryptocurrency tracking application built with React Native and Tamagui, providing real-time insights into cryptocurrency markets, exchanges, and price movements.
 
-## Get started
+## Features
 
-1. Install dependencies
+- **Real-time Price Tracking**: Monitor cryptocurrency prices with live updates
+- **Exchange Information**: Detailed view of cryptocurrency exchanges with trust scores and trading volumes
+- **Price Charts**: Interactive price charts with historical data
+- **Modern UI**: Clean, responsive interface built with Tamagui
+- **Performance Optimized**: Smooth animations and efficient data handling
 
-   ```bash
-   npm install
-   ```
+## Screenshots
 
-2. Start the app
+<div align="center">
+  <img src="assets/images/trends.png" alt="Trends Tab" width="300"/>
+  <img src="assets/images//exchanges.png" alt="Exchanges Tab" width="300"/>
+  <img src="assets/images/details.png" alt="Coin Details Screen" width="300"/>
+</div>
 
-   ```bash
-    npx expo start
-   ```
+## Tech Stack
 
-In the output, you'll find options to open the app in a
+- **Frontend**: React Native Expo
+- **UI Framework**: Tamagui
+- **API State Management**: React Query
+- **Charts**: victory-native
+- **API**: CoinGecko API
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Getting Started
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### Prerequisites
 
-## Get a fresh project
+- Node.js (v14 or higher)
+- npm or yarn
+- React Native development environment setup
 
-When you're ready, run:
+### Installation
 
+1. Clone the repository:
 ```bash
-npm run reset-project
+git clone https://github.com/ugbechike/crypto_pulse.git
+cd crypto_pulse
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
 
-## Learn more
+3. Start the development server:
+```bash
+npm start
+# or
+yarn start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+## Project Structure
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```
+crypto-pulse/
+├── components/         # Reusable UI components
+├── hooks/             # Custom React hooks
+├── utils/             # Utility functions
+├── types/             # TypeScript type definitions
+└── assets/            # Static assets
+```
 
-## Join the community
+## Key Components
 
-Join our community of developers creating universal apps.
+- **PriceChart**: Interactive price charts with real-time data
+- **Exchanges**: List of cryptocurrency exchanges with detailed information
+- **CoinDetails**: Comprehensive view of individual cryptocurrencies
+- **SkeletonLoader**: Animated loading states
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- CoinGecko API for providing cryptocurrency data
+- Tamagui team for the excellent UI framework
+- React Native Expo community for their continuous support
