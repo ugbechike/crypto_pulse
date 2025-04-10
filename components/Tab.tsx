@@ -9,7 +9,7 @@ interface TabProps {
 }
 export const Tab = ({ activeTab, setActiveTab }: TabProps) => {
     return (
-        <Tabs defaultValue="trends" onValueChange={(value) => setActiveTab(value)} value={activeTab} width="80%">
+        <Tabs defaultValue="trends" onValueChange={(value) => setActiveTab(value)} value={activeTab} width="40%">
             <Tabs.List justifyContent="space-between" gap={4}> 
                 {
                     tabs.map((tab) => {

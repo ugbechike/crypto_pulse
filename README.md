@@ -13,6 +13,7 @@ A modern cryptocurrency tracking application built with React Native and Tamagui
 ## Screenshots
 
 <div align="center">
+  <img src="assets/images/home.png" alt="Home Tab" width="300"/>
   <img src="assets/images/trends.png" alt="Trends Tab" width="300"/>
   <img src="assets/images//exchanges.png" alt="Exchanges Tab" width="300"/>
   <img src="assets/images/details.png" alt="Coin Details Screen" width="300"/>
